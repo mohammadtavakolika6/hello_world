@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+body {
+    padding: 20px;
+    font-family: "B Nazanin";
+    font-weight: bold;
+
+}
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,rgba(255,255,0,0.5),rgba(0,255,255,0.8)),url("src/headerImage.jpg");
+    background-color: #61dafb;
+    background-size:cover;
+    background-position: top;
+    clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
+    position: relative;
+
+}
+.header-main-div{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    display: inline-block;
+
+}
+.header-text{
+    color: white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    display: inline-block;
+}
+.header-main{
+    font-size: 50px;
+    letter-spacing: 20px;
+    display: block;
+    animation-name: moveToRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+}
+.header-sub{
+    font-size: 20px;
+    letter-spacing:8.8px;
+    display: block;
+    margin-bottom: 60px;
+    animation:moveToLeft ease-out 1s;
+}
+@keyframes moveToRight {
+    0%{
+        transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes moveToLeft {
+    0%{
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes moveFromBottom {
+    0%{
+        transform: translateY(100px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 100px;
+    display: inline-block;
+    transition: all .1s;
+    animation: moveFromBottom ease-out .6s;
+}
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.btn-white{
+    background-color: #fff;
+    color: rgba(0,0,0,0.7);
+}
+
+/*.btn::after{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition:all 0.4s;
+}
+.btn-white::after{
+    background-color: #ffff;
+}
+btn:hover::after{
+    transform: scaleX(1.4);
+    opacity: 0;
+}*/
+
+/*
+<div class="header">
+    <div class="header-main-div">
+        <h1 class="header-text">
+            <span class="header-main"> Company Name</span>
+            <span class="header-sub">This is some text about Company</span>
+        </h1>
+        <a href="#" class="btn btn-white">Discover our tour</a>
+    </div>
+</div>
+ */
